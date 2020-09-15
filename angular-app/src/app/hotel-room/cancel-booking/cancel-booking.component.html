@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form novalidate [formGroup]="cancelBookingForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+
+          <div class="form-group">
+            <label>Enter booking ID</label>
+            <input type="text" class="form-control"
+                   formControlName="bookingId">
+          </div>
+
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Cancel</button>
+      </form>
+  </div>
+</div>

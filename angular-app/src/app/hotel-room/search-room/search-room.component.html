@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form novalidate [formGroup]="roomsForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+
+          <div class="form-group">
+            <label>Room Size</label>
+            <input type="text" class="form-control"
+                   formControlName="roomSize">
+          </div>
+          <div class="form-group">
+            <label>Room Type:</label>
+            
+              <select class="form-control" name="RoomType" id="RoomType" formControlName="roomType">
+                <option value="--">Select</option>
+                <option value="Standard">Standard</option>
+                <option value="Deluxe">Deluxe</option>
+                <option value="Luxury">Luxury</option>
+              </select>     
+          </div>
+          <div class="form-group">
+            <label>Check In</label>
+            <input type="date"
+                   class="form-control"
+                   formControlName="beginDate">
+          </div>
+
+           <div class="form-group">
+            <label>Check out</label>
+            <input type="date"
+                   class="form-control"
+                   formControlName="endDate">
+          </div>
+
+
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Reserve</button>
+      </form>
+  </div>
+</div>
