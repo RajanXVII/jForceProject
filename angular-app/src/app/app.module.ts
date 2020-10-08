@@ -9,12 +9,20 @@ import { HotelRoomModule } from './hotel-room/hotel-room.module';
 import {HttpModule} from "@angular/http";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchRoomComponent } from './hotel-room/search-room/search-room.component';
+import { LoginComponent } from './login/login.component';
+import { HotelManagementComponent } from './hotel-management/hotel-management.component';
+import { SummaryComponent } from './summary/summary.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchRoomComponent
+    SearchRoomComponent,
+    LoginComponent,
+    HotelManagementComponent,
+    SummaryComponent,
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,

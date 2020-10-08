@@ -1,0 +1,48 @@
+<button  class="btn btn-primary" style="position: absolute;right: 10px;top: 5px;" (click)="back()">Back</button>
+<p style="padding-left: 300px;padding-top: 35px;">
+ <b> Booking summary for user : <span style="color:cadetblue;font-style: oblique;"><u>{{username}}</u></span></b>
+</p>
+<table style="padding-left: 100px;margin-left: 200px;">
+  <thead>
+    <tr *ngIf="titleArr.length>0">
+      <th>Username</th>
+      <th>Room Type</th>
+      
+      
+      <th>Sign In</th>
+      <th>Sign out</th>
+      <th>Booking Id</th>
+    </tr>
+    <tr *ngIf="titleArr.length==0" style="border-style: hidden;">
+      <td style="padding-left:120px;color: crimson;">No Booking Available !!!!</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- <tr>
+      <td class="first">Username:</td>
+      <td>{{usernameHTML}}</td>
+    </tr>
+    <tr>
+      <td class="first">Booking Id:</td>
+      <td>{{bookingId}}</td>
+    </tr>
+    <tr>
+      <td class="first">Room Type:</td>
+      <td>{{roomTypeHTML}}</td>
+    </tr>
+    <tr>
+      <td class="first">Sign In date:</td>
+      <td>{{beginDateHTML}}</td>
+    </tr>
+    <tr>
+      <td class="first">Sign out date:</td>
+      <td>{{endDateHTML}}</td>
+    </tr> -->
+
+    <tr class="first" *ngFor="let item of titleArr">
+      <td  *ngFor="let item2 of item">{{item2}}</td>
+    </tr>
+    
+    
+  </tbody>
+</table>

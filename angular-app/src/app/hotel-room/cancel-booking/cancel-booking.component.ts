@@ -23,7 +23,7 @@ export class CancelBookingComponent implements OnInit {
     onSubmit(){
     if (this.cancelBookingForm.valid) {
       this.hotelRoomService.cancelReservation(this.cancelBookingForm.controls['bookingId'].value).subscribe();
-      this.router.navigate(['/']);
+      this.router.navigate(['/hotelmanager'],{ queryParams: { username: localStorage.getItem("username") }} );
     }
   }
 

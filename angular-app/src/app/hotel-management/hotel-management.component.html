@@ -1,0 +1,11 @@
+<nav>
+  <p style="font-family: Georgia, 'Times New Roman', Times, serif">Hello <i>{{username}},</i></p>
+  <button type="button" *ngIf="checkadmin" class="btn btn-primary" [routerLink]="['/bookRoom', username]"   routerLinkActive="active">Book Rooms</button>
+  <button type="button"  *ngIf="testuser" class="btn btn-primary" routerLink="/cancelBooking" routerLinkActive="active">Cancel Booking</button>
+  <button type="button" *ngIf="checkadmin" class="btn btn-primary" [routerLink]="['/summary', username]" routerLinkActive="active">Summary</button>
+  <button class="btn btn-primary"  style="position: absolute;right: 10px;top: 25px;" (click)="logout()">Logout</button>
+
+
+</nav>
+
+
